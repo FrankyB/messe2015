@@ -3,7 +3,7 @@
   "private": true,
   "name": "workbenchDisplay",
   "description": "A display system for messeWorkbench",
-  "repository": "https://sbs-braungardt.de/git/...",
+  "repository": "https://github.com/FrankyB/messe2015/tree/master/workbenchDisplay",
   "license": "MIT",
   "devDependencies": {
     "karma": "^0.12.16",

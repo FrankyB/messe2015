@@ -6,3 +6,5 @@ bower scripts adapted from angular:
 
 - npm start => webserver
 
+Further reading: https://docs.angularjs.org/tutorial
+
