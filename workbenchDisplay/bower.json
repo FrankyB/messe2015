@@ -1,0 +1,13 @@
+{
+  "name": "workbenchDisplay",
+  "description": "A starter project for AngularJS",
+  "version": "0.0.0",
+  "homepage": "https://sbs-braungardt.de/messe2015",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": "1.10.2",
+    "bootstrap": "~3.1.1"
+  }
+}
+
