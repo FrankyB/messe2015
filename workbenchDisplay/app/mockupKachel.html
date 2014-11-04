@@ -9,15 +9,13 @@
   <script src="js/controllers.js"></script>
 </head>
 <body ng-controller="ProductListCtrl">
-  <div class="container">
-    <table class="table">
-      <tr ng-repeat="array in obj2">
-	  <td ng-repeat="product in array">
-	    <img src="{{product.img}}" 
-	      alt="{{product.name}}" class="img-responsive">
-	  </td>
-      </tr>
-    </table>
+  <div class="container-fluid">
+    <div ng-repeat="array in obj2" class="row">
+      <div ng-repeat="product in array" class="col-xs-12 col-sm-6 col-lg-4 ">
+        <img src="{{product.img}}"
+          alt="{{product.name}}" class="img-responsive center-block">
+      </div>
+    </div>
   </div>
   
 </body>

@@ -29,10 +29,6 @@ workbenchDisplayApp.controller('ProductListCtrl', function($scope) {
     {'name': 'Produkt 6',
      'snippet': 'The Next, Next Generation tablet.',
      'img': 'img/17521u_13.jpg'
-    },
-    {'name': 'Produkt 7',
-     'snippet': 'The Next, Next Generation tablet.',
-     'img': 'img/17534u_2.jpg'
     }
   ];
 
