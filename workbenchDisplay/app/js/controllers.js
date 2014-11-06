@@ -5,6 +5,30 @@
 var workbenchDisplayApp = angular.module('workbenchDisplayApp', []);
 
 workbenchDisplayApp.controller('ProductListCtrl', function($scope) {
+    
+  $scope.languages = [
+    {'name': 'Deutsch',
+     'id': '1',
+     'class': 'active'
+    },
+    {'name': 'English',
+     'id': '2',
+     'class': ''
+    }
+  ];
+
+  $scope.activeLanguage = $scope.languages[0];
+
+  $scope.setLanguage = function (aLanguage) {
+    $scope.activeLanguage = aLanguage;
+  }
+  
+  $scope.isLanguageSelected = function (aLanguage) {
+    var result = "";
+    if (aLanguage == $scope.activeLanguage) result = "active";
+    return result;
+  }
+  
   $scope.products = [
     {'name': 'Produkt 1',
      'snippet': 'Fast just got faster with Nexus S.',
