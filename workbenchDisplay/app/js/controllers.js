@@ -14,6 +14,14 @@ workbenchDisplayApp.controller('ProductListCtrl', function($scope) {
     {'name': 'English',
      'id': '2',
      'class': ''
+    },
+    {'name': 'Griechisch',
+     'id': '3',
+     'class': ''
+    },
+    {'name': 'Schwäbisch',
+     'id': '4',
+     'class': ''
     }
   ];
 
@@ -53,6 +61,14 @@ workbenchDisplayApp.controller('ProductListCtrl', function($scope) {
     {'name': 'Produkt 6',
      'snippet': 'The Next, Next Generation tablet.',
      'img': 'img/17521u_13.jpg'
+    },
+    {'name': 'Produkt 7',
+     'snippet': 'The Next, Next Generation tablet.',
+     'img': 'img/17534u_2.jpg'
+    },
+    {'name': '',
+     'snippet': '',
+     'img': ''
     }
   ];
 
@@ -60,7 +76,6 @@ workbenchDisplayApp.controller('ProductListCtrl', function($scope) {
   var i = 0;
   var y = 0;
   while ($scope.products.length) {
-      $scope.obj2.push($scope.products.splice(0, 3));
+      $scope.obj2.push($scope.products.splice(0, 4));
   };
 });
-

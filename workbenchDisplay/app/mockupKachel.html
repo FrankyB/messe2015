@@ -6,20 +6,26 @@
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="css/app.css">
   <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/jquery/jquery.min.js"></script>
   <script src="js/controllers.js"></script>
+  <script src="js/functions.js"></script>
 </head>
-<body ng-controller="ProductListCtrl">
+<body ng-controller="ProductListCtrl" id="canvasParent" onload="initCanvas()">
   <div class="container-fluid">
+    <div class="span12">
+      <img class="logo text-right" src="img/logo.jpg"></img>
+    </div>
     <ul class="nav nav-tabs" role="tablist">
       <li ng-repeat="language in languages" ng-click="setLanguage(language)" role="languageselector" class="{{isLanguageSelected(language)}}" ><a href="#">{{language.name}}</a></li>
     </ul>
-    <div ng-repeat="array in obj2" class="row row-xs-height">
-      <div ng-repeat="product in array" class="col-lg-height col-md-height col-middle col-sm-12 col-md-4 col-lg-2">
-        <img src="{{product.img}}"
-          alt="{{product.name}}" class="img-responsive">
+    <div class="content">
+      <div ng-repeat="array in obj2" class="row row-xs-height">
+        <div ng-repeat="product in array" class="col-lg-height col-md-height col-middle col-sm-12 col-md-4 col-lg-2">
+          <img src="{{product.img}}"
+            alt="{{product.name}}" class="img-responsive">
+        </div>
       </div>
     </div>
   </div>
-  
 </body>
 </html>
