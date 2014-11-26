@@ -32,3 +32,5 @@ Start;
   cd  ~/svr/messe2015
   bash install.sh
   
+Benutzung:
+  Browser öffnen auf localhost:8000
