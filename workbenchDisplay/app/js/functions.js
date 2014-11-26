@@ -5,8 +5,10 @@ var drawingCanvas = function() {
   var context;
   var clickX = new Array();
   var clickY = new Array();
+  var clickColor = new Array();
   var clickDrag = new Array();
   var paint;
+  var _activeColor = "#ff2d2d";
 
   function _canvasWidth() {
      if ( $( window ).width() > $("#canvasParent").innerWidth() ) {
@@ -66,11 +68,11 @@ var drawingCanvas = function() {
   function redraw(){
     context.clearRect(0, 0, context.canvas.width, context.canvas.height); // Clears the canvas
     
-    context.strokeStyle = "#df4b26";
     context.lineJoin = "round";
     context.lineWidth = 5;
                           
     for(var i=0; i < clickX.length; i++) {                
+      context.strokeStyle = clickColor[i-1];
       context.beginPath();
       if(clickDrag[i] && i){
         context.moveTo(clickX[i-1], clickY[i-1]);
@@ -86,6 +88,7 @@ var drawingCanvas = function() {
   function _addClick (x, y, dragging) {
     clickX.push(x);
     clickY.push(y);
+    clickColor.push(_activeColor);
     clickDrag.push(dragging);
   }
 
@@ -106,6 +109,10 @@ var drawingCanvas = function() {
       }
       context = canvas.getContext("2d");
       _registerCanvasEvents();
+    },
+    
+    setActiveColor : function (aColor) {
+      _activeColor = aColor;
     },
     
     clearCanvas : function () {
@@ -133,4 +140,9 @@ function showCanvas() {
 
 function hideCanvas() {
   drawingCanvas.hide();
+}
+
+function chooseColor(aColorId) {
+  var color = $("#"+aColorId).css("background-color");
+  drawingCanvas.setActiveColor(color);
 }
