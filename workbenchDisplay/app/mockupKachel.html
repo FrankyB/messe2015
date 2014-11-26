@@ -1,31 +1,81 @@
 <!doctype html>
 <html lang="en" ng-app="workbenchDisplayApp">
-<head>
-  <meta charset="utf-8">
-  <title>mockupKachel</title>
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="css/app.css">
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/jquery/jquery.min.js"></script>
-  <script src="js/controllers.js"></script>
-  <script src="js/functions.js"></script>
-</head>
-<body ng-controller="ProductListCtrl" id="canvasParent" onload="initCanvas()">
-  <div class="container-fluid">
-    <div class="span12">
-      <img class="logo text-right" src="img/logo.jpg"></img>
-    </div>
-    <ul class="nav nav-tabs" role="tablist">
-      <li ng-repeat="language in languages" ng-click="setLanguage(language)" role="languageselector" class="{{isLanguageSelected(language)}}" ><a href="#">{{language.name}}</a></li>
-    </ul>
-    <div class="content">
-      <div ng-repeat="array in obj2" class="row row-xs-height">
-        <div ng-repeat="product in array" class="col-lg-height col-md-height col-middle col-sm-12 col-md-4 col-lg-2">
-          <img src="{{product.img}}"
-            alt="{{product.name}}" class="img-responsive">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>mockupKachel</title>
+    <link rel="stylesheet" href="bower_components/slidebars/distribution/0.10.2/slidebars.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/app.css">
+    <!-- Slidebars CSS -->
+    
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/functions.js"></script>
+  </head>
+  <body ng-controller="ProductListCtrl" id="canvasParent" onload="initCanvas()">
+    <div class="container-fluid">
+      <div class="span12 xs-invisible sm-invisible topSpacer">
+      </div>
+      <div class="span12">
+        <img class="logo text-right" src="img/logo.jpg"></img>
+      </div>
+      <ul class="nav nav-tabs" role="tablist">
+        <li ng-repeat="language in languages" ng-click="setLanguage(language)" role="languageselector" class="{{isLanguageSelected(language)}}" ><a href="#">{{language.name}}</a></li>
+      </ul>
+      <div class="content">
+        <div ng-repeat="array in obj2" class="row row-xs-height">
+          <div ng-repeat="product in array" class="col-lg-height col-md-height col-middle col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <img src="{{product.img}}"
+              alt="{{product.name}}" class="img-responsive imgKachel">
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</body>
+    
+    <div class="sliderToggle sb-toggle-left">
+      
+    </div>
+    
+    <!-- slidebar -->
+    <div class="slideBar sb-slide sb-momentum-scrolling sb-slidebar sb-left sb-style-push sb-close">
+      <!-- Your left Slidebar content. -->
+      <div class="container-fluid menuContainer">
+          <div class="menuIconPanel">
+            <img src="img/canvas.png"
+              alt="notes" class="menuIcon sb-close" onclick="showCanvas()">
+          </div><br/>
+          <div class="menuIconPanel" onclick="">
+            <div class="menuIcon redIcon" onclick="">
+            </div>
+          </div><br/>
+          <div class="menuIconPanel" onclick="">
+            <div class="greenIcon menuIcon" onclick="">
+            </div>
+          </div><br/>
+          <div class="menuIconPanel" onclick="">
+            <div class="menuIcon blueIcon" onclick="">
+            </div>
+          </div><br/>
+          <div class="menuIconPanel">
+            <img src="img/nocanvas.png"
+              alt="plain" class="menuIcon sb-close" onclick="hideCanvas()">
+          </div><br/>
+          <div class="menuIconPanel">
+            <img src="img/email.svg"
+              alt="email" class="menuIcon sb-close" onclick="alert(\"Email\");">
+          </div><br/>
+      </div>
+    </div>
+    
+    <script src="bower_components/jquery/jquery.min.js"></script>
+    <script src="bower_components/slidebars/distribution/0.10.2/slidebars.min.js"></script>
+    <script>
+      (function($) {
+          $(document).ready(function() {
+            $.slidebars();
+          });
+        }) (jQuery);
+    </script>
+  </body>
 </html>

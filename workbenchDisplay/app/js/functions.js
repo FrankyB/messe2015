@@ -94,25 +94,30 @@ var drawingCanvas = function() {
     appendCanvas : function (aCanvasContainer) {
       var canvasDiv = document.getElementById(aCanvasContainer);
       canvas = document.createElement('canvas');
+      canvas.className = "drawingCanvas";
       canvas.setAttribute('width', _canvasWidth());
       canvas.setAttribute('height', _canvasHeight());
       canvas.setAttribute('id', drawingCanvasId);
-      canvas.style.position = "absolute";
-      canvas.style.top = "0px";
-      canvas.style.left = "0px";
-      canvas.style.zIndex = 10;
+      canvas.style.display = "none";
+
       canvasDiv.appendChild(canvas);
       if(typeof G_vmlCanvasManager != 'undefined') {
               canvas = G_vmlCanvasManager.initElement(canvas);
       }
       context = canvas.getContext("2d");
       _registerCanvasEvents();
-      
-      
     },
     
     clearCanvas : function () {
       context.clearRect(0, 0, _canvasWidth(), _canvasHeight());
+    },
+    
+    show : function () {
+      canvas.style.display = "";
+    },
+    
+    hide : function () {
+      canvas.style.display = "none";
     }
     
   }  
@@ -120,4 +125,12 @@ var drawingCanvas = function() {
 
 function initCanvas() {
   drawingCanvas.appendCanvas("canvasParent");
+}
+
+function showCanvas() {
+  drawingCanvas.show();
+}
+
+function hideCanvas() {
+  drawingCanvas.hide();
 }

@@ -11,6 +11,9 @@
     display:table-cell;
     float:none;
 }
+.xs-invisible {
+    display: none;
+}
 @media (min-width: 768px) {
     .container-sm-height {
         display:table;
@@ -23,6 +26,12 @@
     .col-sm-height {
         display:table-cell;
         float:none;
+    }
+    .xs-invisible {
+      display: table;
+    }
+    .sm-invisible {
+      display: none;
     }
 }
 @media (min-width: 992px) {
@@ -38,6 +47,15 @@
         display:table-cell;
         float:none;
     }
+    .xs-invisible {
+      display: table;
+    }
+    .sm-invisible {
+      display: table;
+    }
+    .md-invisible {
+      display: none;
+    }
 }
 @media (min-width: 1200px) {
     .container-lg-height {
@@ -51,6 +69,15 @@
     .col-lg-height {
         display:table-cell;
         float:none;
+    }
+    .sm-invisible {
+      display:table;
+    }
+    .md-invisible {
+      display:table;
+    }
+    .lg-invisible {
+      display: none;
     }
 }
 
@@ -116,5 +143,69 @@ body {
 .logo {
   position: absolute;
   right: 15px;
-  top: 40px;
+}
+
+.sliderToggle {
+  position: absolute;
+  left:0px;
+  top:0px;
+  width: 25px;
+  height: 100%;
+}
+
+.slideBar {
+  z-index: 20;
+  padding-top: 20px;
+  width: 80px;
+}
+
+.drawingCanvas {
+  position : absolute;
+  top : 0px;
+  left : 25px;
+  z-index : 10;
+}
+
+img.menuIcon,
+div.menuIcon {
+  padding: 0px;
+  width: 60px;
+  height: 60px;
+}
+
+div.menuIcon {
+  height: 60px;
+}
+
+div.menuIconPanel {
+  padding: 5px;
+  padding-left: 3px;
+  background-color: white;
+  border-radius: 2px;
+  border: 2px solid #999999;
+}
+
+.redIcon {
+  background-color: #ff2d2d;
+}
+
+.greenIcon {
+  background-color: #2df52d;
+}
+
+.blueIcon {
+  background-color: #0091dc;
+}
+
+
+.menuContainer {
+  padding: 5px;
+}
+
+.topSpacer {
+  height: 110px;
+}
+
+.imgKachel {
+  
 }
