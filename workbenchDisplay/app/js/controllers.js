@@ -51,7 +51,7 @@ workbenchDisplayControllers.controller('ProductListCtrl', ['$scope', '$http',
 }]);
 
 
-workbenchDisplayControllers.controller('ProductDetailCtrl', ['$hhtp', '$routeParams', 
+workbenchDisplayControllers.controller('ProductDetailCtrl', ['$http', '$routeParams', 
   function($scope, $routeParams) {
     $scope.productId = $routeParams.productId;
   }
