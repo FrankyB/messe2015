@@ -5,5 +5,6 @@ git pull
 
 cd workbenchDisplay
 npm install
+bower update
 
 bash start.sh

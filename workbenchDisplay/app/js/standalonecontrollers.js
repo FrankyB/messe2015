@@ -2,9 +2,12 @@
 
 /* Controllers */
 
+var workbenchDisplayApp = angular.module('workbenchDisplayApp', []);
+
 var workbenchDisplayControllers = angular.module('workbenchDisplayControllers', []);
 
-workbenchDisplayControllers.controller('ProductListCtrl', ['$scope', '$http', 
+//workbenchDisplayControllers.controller('ProductListCtrl', function($scope) {
+workbenchDisplayApp.controller('ProductListCtrl', ['$scope', '$http', 
   function ($scope, $http) {
     
     $scope.languages = [
