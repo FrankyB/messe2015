@@ -11,7 +11,7 @@ workbenchDisplayApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/products', {
-        templateUrl: 'partials/product-list.html',
+        templateUrl: 'partials/product-kachel-list.html',
         controller: 'ProductListCtrl'
       }).
       when('/products/:productId', {

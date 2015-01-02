@@ -1,3 +1,23 @@
+/*@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+*/
+/* metaplus */
+@font-face {
+  font-family: MetaPlusLF;
+  src: url(../fonts/meplfr_.ttf) format("truetype");
+}
+@font-face {
+  font-family: MetaPlusLF;
+  src: url(../fonts/meplfb_.ttf) format("truetype");
+  font-weight: bold;
+}
+
+[class*="metapluslf-"]:before {
+  font-family: 'MetaPlusLF', sans-serif;
+}
+
 * columns of same height styles */
 .container-xs-height {
     display:table;
@@ -83,7 +103,7 @@
 
 /* firefox fix */
 .img-responsive {
-    width: 100%;
+/*    width: 100%; */
 }
 
 /* vertical alignment styles */
@@ -99,16 +119,21 @@
 
 /* app css stylesheet */
 
-body {
-  padding-top: 20px;
-}
-
 /* 
  * http://www.colorzilla.com/gradient-editor/#3d4751+0,1a1d22+16,0c0d10+25,1f2022+37,7e878c+69,b2bdc3+91,afbac0+100;Custom
  * 
  */
 html {
+  height: 100%
   background: #3d4751; /* Old browsers */
+  font-family: MetaPlusLF;
+}
+
+body {
+  padding-top: 20px;
+  font-family: MetaPlusLF;
+  height: 100%;
+  margin: 0;
   background: -moz-linear-gradient(45deg,  #3d4751 0%, #1a1d22 16%, #0c0d10 25%, #1f2022 37%, #7e878c 69%, #b2bdc3 91%, #afbac0 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#3d4751), color-stop(16%,#1a1d22), color-stop(25%,#0c0d10), color-stop(37%,#1f2022), color-stop(69%,#7e878c), color-stop(91%,#b2bdc3), color-stop(100%,#afbac0)); /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(45deg,  #3d4751 0%,#1a1d22 16%,#0c0d10 25%,#1f2022 37%,#7e878c 69%,#b2bdc3 91%,#afbac0 100%); /* Chrome10+,Safari5.1+ */
@@ -116,10 +141,6 @@ html {
   background: -ms-linear-gradient(45deg,  #3d4751 0%,#1a1d22 16%,#0c0d10 25%,#1f2022 37%,#7e878c 69%,#b2bdc3 91%,#afbac0 100%); /* IE10+ */
   background: linear-gradient(45deg,  #3d4751 0%,#1a1d22 16%,#0c0d10 25%,#1f2022 37%,#7e878c 69%,#b2bdc3 91%,#afbac0 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3d4751', endColorstr='#afbac0',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-}
-
-body {
-  background-color: transparent;
 }
 
 .content {
@@ -207,5 +228,70 @@ div.menuIconPanel {
 }
 
 .imgKachel {
-  
+  max-height: 100%;
+  margin: 0 auto;
+}
+
+.productKachel {
+  border: 1px solid grey;
+}
+
+
+.product-kachel {
+  margin-bottom: 30px;
+  border: 1px solid #666666;
+}
+          
+.product-kachel-content {
+  background: rgb(255, 255, 255);
+  height: 190px;
+  position: relative;
+}
+          
+.product-kachel-action {
+  padding: 10px;
+  background: rgb(104, 118, 122);
+  color: rgb(230, 230, 230);
+  height: 40px;
+}
+
+.product-kachel-content-text {
+  margin-left: 10px;
+}
+          
+.product-kachel-content-name {
+  color: rgb(210, 10, 70);
+  font-size: 1.35em;
+  font-weight: bold;
+}
+          
+.product-kachel-content-company, .nova-kachel-content-published {
+  font-size: 0.85em;
+}
+          
+.product-kachel-content-published {
+  position: absolute;
+  right: 20px;
+  bottom: 0px;
+}
+          
+.product-kachel-content-label {
+  position: absolute; 
+  bottom: 0px;
+  background: rgba(255,255,255,0.4);
+  margin-bottom: -1px;
+  border-radius: 0px;
+  box-shadow: 0;
+  border: 0;
+  left: 0px;
+  right: 0px;
+}
+
+.product-kachel-content-label > div {
+  color: black;
+  font-weight: bold;
+}
+
+.productListHeadline {
+  margin-left: 25px;
 }

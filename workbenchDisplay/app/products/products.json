@@ -1,42 +1,45 @@
-[
-    {"name": "Produkt 1",
-     "snippet": "Fast just got faster with Nexus S.",
-     "img": "img/7374k.jpg",
-     "id": "Produkt1"
-    },
-    {"name": "Product 2",
-     "snippet": "The Next, Next Generation tablet.",
-     "img": "img/9481g_2.jpg",
-     "id": "Produkt2"
-    },
-    {"name": "Product 3",
-     "snippet": "The Next, Next Generation tablet.",
-     "img": "img/13755u_1.jpg",
-     "id": "Produkt3"
-    },
-    {"name": "Product 4",
-     "snippet": "The Next, Next Generation tablet.",
-     "img": "img/16050u.jpg",
-     "id": "Produkt4"
-    },
-    {"name": "Product 5",
-     "snippet": "The Next, Next Generation tablet.",
-     "img": "img/16169u_2.jpg",
-     "id": "Produkt5"
-    },
-    {"name": "Produkt 6",
-     "snippet": "The Next, Next Generation tablet.",
-     "img": "img/17521u_13.jpg",
-     "id": "Produkt6"
-    },
-    {"name": "Produkt 7",
-     "snippet": "The Next, Next Generation tablet.",
-     "img": "img/17534u_2.jpg",
-     "id": "Produkt7"
-    },
-    {"name": "",
-     "snippet": "",
-     "img": "",
-     "id":""
-    }
-]
+{ "headline": "IO-Link Portfolio und Lösungen",
+  "productList": 
+    [
+      {"name": "Produkt 1",
+      "snippet": "Fast just got faster with Nexus S.",
+      "img": "img/7374k.jpg",
+      "id": "Produkt1"
+      },
+      {"name": "Product 2",
+      "snippet": "The Next, Next Generation tablet.",
+      "img": "img/9481g_2.jpg",
+      "id": "Produkt2"
+      },
+      {"name": "Product 3",
+      "snippet": "The Next, Next Generation tablet.",
+      "img": "img/13755u_1.jpg",
+      "id": "Produkt3"
+      },
+      {"name": "Product 4",
+      "snippet": "The Next, Next Generation tablet.",
+      "img": "img/16050u.jpg",
+      "id": "Produkt4"
+      },
+      {"name": "Product 5",
+      "snippet": "The Next, Next Generation tablet.",
+      "img": "img/16169u_2.jpg",
+      "id": "Produkt5"
+      },
+      {"name": "Produkt 6",
+      "snippet": "The Next, Next Generation tablet.",
+      "img": "img/17521u_13.jpg",
+      "id": "Produkt6"
+      },
+      {"name": "Produkt 7",
+      "snippet": "The Next, Next Generation tablet.",
+      "img": "img/17534u_2.jpg",
+      "id": "Produkt7"
+      },
+      {"name": "",
+      "snippet": "",
+      "img": "",
+      "id":""
+      }
+  ]
+}

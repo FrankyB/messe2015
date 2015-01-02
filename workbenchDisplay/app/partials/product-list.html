@@ -11,8 +11,10 @@
         <div ng-repeat="array in obj2" class="row row-xs-height">
           <div ng-repeat="product in array" class="col-lg-height col-md-height col-middle col-xs-12 col-sm-6 col-md-4 col-lg-3">
             <a href="#/products/{{product.id}}" class="thumb">
-	      <img src="{{product.img}}"
-		alt="{{product.name}}" class="img-responsive imgKachel">
+              <p class="productKachel">
+	        <img src="{{product.img}}"
+		  alt="{{product.name}}" class="img-responsive imgKachel">
+	      </p> 
             </a>
           </div>
         </div>

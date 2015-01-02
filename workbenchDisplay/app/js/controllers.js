@@ -41,18 +41,25 @@ workbenchDisplayControllers.controller('ProductListCtrl', ['$scope', '$http',
     $scope.obj2 = [];
 
     $http.get('products/products.json').success(function(data) {
-      $scope.products = data;
+      $scope.products = data.productList;
+      var save = jQuery.extend(true, {}, data);
       var i = 0;
       var y = 0;
       while ($scope.products.length) {
         $scope.obj2.push($scope.products.splice(0, 4));
       };     
+      $scope.products = save.productList;
+      $scope.productListHeadline = save.headline;
     });
 }]);
 
 
-workbenchDisplayControllers.controller('ProductDetailCtrl', ['$http', '$routeParams', 
-  function($scope, $routeParams) {
+workbenchDisplayControllers.controller('ProductDetailCtrl', ['$scope', '$routeParams', '$http',
+  function($scope, $routeParams, $http) {
     $scope.productId = $routeParams.productId;
+
+    $http.get('products/'+String.toLowerCase($routeParams.productId)+'.json').success(function(data) {
+      $scope.product = data;
+    });    
   }
 ]);
