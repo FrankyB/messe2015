@@ -1,0 +1,19 @@
+[
+  {"name": "Deutsch",
+  "id": "1",
+  "class": "active"
+  },
+  {"name": "English",
+  "id": "2",
+  "class": ""
+  },
+  {"name": "Griechisch",
+  "id": "3",
+  "class": ""
+  },
+  {"name": "Schwäbisch",
+  "id": "4",
+  "class": ""
+  }
+]
+

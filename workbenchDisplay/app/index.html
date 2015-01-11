@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="css/app.css">
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
@@ -15,7 +16,21 @@
   </head>
   <body id="canvasParent" onload="initCanvas()">
 
-    <div ng-view></div>
+    <div class="container">
+      <div class="span12 xs-invisible sm-invisible topSpacer">
+      </div>
+      <div class="span12">
+        <img class="logo text-right" src="img/logo.jpg"></img>
+      </div>
+      <!-- language selector -->
+      <div ng-controller="LanguageController">
+        <div my-language-selector class="nav nav-tabs" role="tablist"></div>
+      </div>
+      <!-- "normal" content -->
+      <div ng-view class="content row" >
+         
+      </div>
+    </div>
 
     <div class="sliderToggle sb-toggle-left">
       

@@ -1,43 +1,10 @@
 'use strict';
 
 /* Controllers */
-
 var workbenchDisplayControllers = angular.module('workbenchDisplayControllers', []);
 
 workbenchDisplayControllers.controller('ProductListCtrl', ['$scope', '$http', 
   function ($scope, $http) {
-    
-    $scope.languages = [
-      {'name': 'Deutsch',
-      'id': '1',
-      'class': 'active'
-      },
-      {'name': 'English',
-      'id': '2',
-      'class': ''
-      },
-      {'name': 'Griechisch',
-      'id': '3',
-      'class': ''
-      },
-      {'name': 'Schwäbisch',
-      'id': '4',
-      'class': ''
-      }
-    ];
-
-    $scope.activeLanguage = $scope.languages[0];
-
-    $scope.setLanguage = function (aLanguage) {
-      $scope.activeLanguage = aLanguage;
-    }
-    
-    $scope.isLanguageSelected = function (aLanguage) {
-      var result = "";
-      if (aLanguage == $scope.activeLanguage) result = "active";
-      return result;
-    }
-    
     $scope.obj2 = [];
 
     $http.get('products/products.json').success(function(data) {
@@ -56,6 +23,7 @@ workbenchDisplayControllers.controller('ProductListCtrl', ['$scope', '$http',
 
 workbenchDisplayControllers.controller('ProductDetailCtrl', ['$scope', '$routeParams', '$http',
   function($scope, $routeParams, $http) {
+
     $scope.productId = $routeParams.productId;
 
     $http.get('products/'+String.toLowerCase($routeParams.productId)+'.json').success(function(data) {
@@ -63,3 +31,33 @@ workbenchDisplayControllers.controller('ProductDetailCtrl', ['$scope', '$routePa
     });    
   }
 ]);
+
+workbenchDisplayControllers.controller('LanguageController', ['$scope', '$http', 
+    function ($scope,$http) {
+      $http.get('languages/languages.json').success(function(data) {
+        $scope.languages = data;
+        $scope.activeLanguage = $scope.languages[0];
+
+        $scope.setLanguage = function (aLanguage) {
+          $scope.activeLanguage = aLanguage;
+        }
+      });
+      
+      $scope.isLanguageSelected = function (aLanguage) {
+        var result = "";
+        if (aLanguage == $scope.activeLanguage) result = "active";
+        return result;
+      }
+    
+    }])
+  .directive('myLanguageSelector', 
+    function () {
+      return {
+//        template: 'Language: {{languages.name}} id: {{languages.id}}'
+        template: '<ul class="nav nav-tabs" role="tablist">'+
+                  '  <li ng-repeat="language in languages" ng-click="setLanguage(language)" role="languageselector" class="{{isLanguageSelected(language)}}" ><a href="#">{{language.name}}</a></li>'+
+                  '</ul>'
+      };
+    }
+  )
+;

@@ -1,13 +1,3 @@
-    <div class="container">
-      <div class="span12 xs-invisible sm-invisible topSpacer">
-      </div>
-      <div class="span12">
-        <img class="logo text-right" src="img/logo.jpg"></img>
-      </div>
-      <ul class="nav nav-tabs" role="tablist">
-        <li ng-repeat="language in languages" ng-click="setLanguage(language)" role="languageselector" class="{{isLanguageSelected(language)}}" ><a href="#">{{language.name}}</a></li>
-      </ul>
-      <div class="content row">
         <h1 class="productListHeadline">{{productListHeadline}}</h1>
         <div ng-repeat="product in products" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
           <div class="product-kachel">
@@ -27,6 +17,4 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
     

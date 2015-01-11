@@ -4,6 +4,7 @@
 // Routed die views //
 var workbenchDisplayApp = angular.module('workbenchDisplayApp', [
   'ngRoute',
+  'ngAnimate',
   'workbenchDisplayControllers'
 ]);
 
